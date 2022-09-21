@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Kate Velikodnaya](https://up.htmlacademy.ru/htmlcss/35/user/2146421).
-* Наставник: `Неизвестно`.
+* Наставник: [Маргарита Шабельникова](https://htmlacademy.ru/profile/id1974723).
 
 ---
 
