@@ -44,7 +44,6 @@
         </ul>
       </nav>
     </header>
-  </body>
     <main class="main-inner">
       <header class="inner-header">
         <h1 class="inner-header-title">Гостиницы Седоны</h1>
@@ -110,8 +109,10 @@
             <legend class="catalog-filter-title">Стоимость, <span class="visually-hidden">Логотип рубля</span></legend>
             <input type="range" min="0" max="9000" step="100" >
           </fieldset>
-          <button class="button-acsept button" type="submit">Применить</button>
-          <button class="button-reset button" type="reset">Сбросить</button>
+          <div>
+            <button class="button-acsept button" type="submit">Применить</button>
+            <button class="button-reset button" type="reset">Сбросить</button>
+          </div>
         </form>
         <p class="total-hotels-number">Найдено гостиниц: <span class="hotels-amount">38</span></p>
         <select name="hotel-sorting" aria-label="Сортировка">
@@ -119,16 +120,24 @@
           <option value="cheap">Сначала дорогие</option>
           <option value="popular">Сначала популярные</option>
         </select>
-        <div class="sorting-icons">
-          <a href="#" class="button-sort"> <!-- какой еще класс добавить? почему в примере это ссылка?-->
-            <span class="visually-hidden">Отображение плиткой</span>
-          </a>
-          <a href="#" class="button-sort"> <!-- какой еще класс добавить? почему в примере это ссылка?-->
-            <span class="visually-hidden">Отображение списком</span>
-          </a>
-          <a href="#" class="button-sort"> <!-- какой еще класс добавить? почему в примере это ссылка?-->
-            <span class="visually-hidden">Отображение не поняла как</span>
-          </a>
+        <div>
+          <ul class="sorting-icons">
+            <li class="sorting-item">
+              <a href="#" class="button-sort">
+                <span class="visually-hidden">Отображение плиткой</span>
+              </a>
+            </li>
+            <li class="sorting-item">
+              <a href="#" class="button-sort">
+                <span class="visually-hidden">Отображение списком</span>
+              </a>
+            </li>
+            <li class="sorting-item">
+              <a href="#" class="button-sort">
+                <span class="visually-hidden">Отображение не поняла как</span>
+              </a>
+            </li>
+          </ul>
         </div>
         <ul class="product-list">
           <li class="product-card">
@@ -147,7 +156,6 @@
             <div class="product-rating-info">
               <img class="product-rating-image" src="" alt="">
               <div class="product-rating-stars">
-                <span class="visually-hidden">Рейтинг в звездах</span>
                 <span class="product-card-rating button">Рейтинг 8,5</span>
               </div>
             </div>
@@ -168,7 +176,6 @@
             <div class="product-rating-info">
               <img class="product-rating-image" src="" alt="">
               <div class="product-rating-stars">
-                <span class="visually-hidden">Рейтинг в звездах</span>
                 <span class="product-card-rating button">Рейтинг 9,2</span>
               </div>
             </div>
@@ -189,7 +196,6 @@
             <div class="product-rating-info">
               <img class="product-rating-image" src="" alt="">
               <div class="product-rating-stars">
-                <span class="visually-hidden">Рейтинг в звездах</span>
                 <span class="product-card-rating button">Рейтинг 6,9</span>
               </div>
             </div>
@@ -210,7 +216,6 @@
             <div class="product-rating-info">
               <img class="product-rating-image" src="" alt="">
               <div class="product-rating-stars">
-                <span class="visually-hidden">Рейтинг в звездах</span>
                 <span class="product-card-rating button">Рейтинг 5,0</span>
               </div>
             </div>
@@ -242,6 +247,7 @@
           <h2 class="subscription-title">Подпишитесь на рассылку</h2>
           <p class="subscription-statement">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
+            <label for="subscription-email" class="visually-hidden">E-mail</label>
             <input class="field" placeholder="email@example.com" type="email" id="subscription-email" name="subscription-email">
             <button class="subscription-button button" type="submit">Подписаться</button>
           </form>
@@ -270,10 +276,10 @@
         </ul>
       </div>
       <div class="made-in">
-        <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a>
+        <a class="contacts-phone" href="tel:+78005558628">+7 812 812-12-12</a>
       </div>
       <div>
-        <a class="contacts-phone" href="tel:+78005558628">+7 812 812-12-12</a>
+        <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a>
       </div>
     </footer>
   </body>
