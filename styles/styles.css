@@ -14,6 +14,8 @@
   font-display: swap;
 }
 
+
+
 html {
   height: 100%;
 }
@@ -31,14 +33,23 @@ body {
   background-color: #f2f2f2;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .site-container {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   width: 1200px;
   margin: 0 auto;
-  background-color: #FFFFFF;
-
 }
 
 .page-header {
@@ -46,12 +57,13 @@ body {
   display: flex;
   width: 1060px;
   margin: 0 auto;
-
-
+  padding: 0;
 }
 
 .navigation {
   display: flex;
+  width: 892px;
+  padding: 0;
 }
 
 .page-header-logo {
@@ -60,23 +72,45 @@ body {
 }
 
 .navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 450px;
   margin: 0;
   padding: 0;
-  width: 450px;
+  list-style-type: none;
 }
 
-.navigation-item {
-  width: 310px;
+.navigation-user {
+  display: flex;
+  width: 320px;
+  margin: 0;
+  padding: 0;
   margin-left: auto;
+  justify-content: flex-end;
+  list-style-type: none;
 }
 
 .navigation-link {
+  padding: 20px 16px;
+  display: block;
   font-weight: 700;
   color: #000000;
   font-size: 20px;
   line-height: 24px;
   text-decoration: none;
   text-align: center;
+}
+
+
+.navigation-user .navigation-link {
+  min-width: 12px;
+  min-height: 24px;
+}
+
+.navigation-button {
+
+  background-color: #756157;
+  display: block;
 }
 
 .hero {
@@ -88,16 +122,22 @@ body {
   text-align: center;
   background-image: url("../images/content/Hero-vector-footer.svg"), url("../images/content/index-background.jpg");
   background-repeat: no-repeat, no-repeat;
-  background-position: bottom center, center;
+  background-position: bottom, center;
 }
 
 .hero-image {
   display: block;
   margin: 0 auto;
+  padding-top: 52px;
 }
 
 .introduction {
   text-align: center;
+  margin: 0;
+  padding: 0;
+  padding-top: 69px;
+  padding-bottom: 90px;
+  background-color: #FFFFFF;
 
 }
 
@@ -109,14 +149,15 @@ body {
   text-transform: uppercase;
   width: 620px;
   margin: 0 auto;
-  padding-top: 69px;
+  padding-top: 0;
+
 }
 
 .introduction-text {
   font-size: 22px;
   line-height: 26px;
   color: #333333;
-
+  padding-bottom: 0;
 }
 
 .advantages-list {
@@ -136,6 +177,14 @@ body {
   display: flex;
 }
 
+.advantages-style {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 85px;
+  padding-right: 85px;
+}
+
 .advantages-list li:nth-child(even) {
   background-color: rgba(131, 179, 211, 0.12);
 }
@@ -152,6 +201,15 @@ body {
   text-transform: uppercase;
 }
 
+.advantages-item {
+  min-height: 400px;
+  list-style-type: none;
+
+}
+
+.advantages-picture {
+  margin: 0;
+}
 
 .services {
   text-align: center;
@@ -330,6 +388,7 @@ body {
 }
 
 .button {
+  display: block;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
