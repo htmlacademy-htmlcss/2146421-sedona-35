@@ -600,6 +600,77 @@ li:not(:first-child):not(:last-child) .advantages-title::before {
   padding: 0;
   border: none;
 }
+.range {
+  width: 287px;
+}
+
+.range-scale {
+  position: relative;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-top: 48px;
+}
+
+ .range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #FFFFFF;
+ }
+
+ .range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+ }
+
+ .range-toggle:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+ }
+
+ .range-toggle:focus {
+  border: 3px solid #83B3D3;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+ }
+
+ .range-toggle:active {
+  border: 2px solid #83B3D3;
+  box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.4);
+ }
+
+ .range-input::-webkit-outer-spin-button,
+ .range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+ }
+
+ .range-input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+ }
+
+ .catalog-filter-label {
+  display: flex;
+ }
+
+ .range-wrapper-inputs {
+  display: flex;
+  justify-content: center;
+ }
+.toggle-min {
+  left: -10px;
+  top: -8px;
+}
+
+.toggle-max {
+  right: -10px;
+  top: -8px;
+}
+
 
 .catalog-filter-group:first-child {
   margin-right: 70px;
@@ -607,7 +678,7 @@ li:not(:first-child):not(:last-child) .advantages-title::before {
 
 
 .catalog-filter-group:nth-child(3) {
-  margin-left: auto;
+  width: 288px;
 }
 
 .catalog-filter-list {
