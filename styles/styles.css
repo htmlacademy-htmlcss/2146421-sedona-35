@@ -19,6 +19,7 @@ html {
 }
 
 body {
+
   margin: 0;
   font-family: "PT Sans", sans-serif;
   display: flex;
@@ -65,6 +66,7 @@ body {
 }
 
 .navigation {
+
   display: flex;
   width: 892px;
   margin-left: auto;
@@ -72,7 +74,7 @@ body {
 }
 
 .navigation-logo {
-  display: block;
+
   position: absolute;
   z-index: 1;
   padding-bottom: 0;
@@ -89,7 +91,10 @@ body {
   list-style-type: none;
 }
 
+
 .navigation-user {
+  margin: 0;
+  padding: 0;
   width: 320px;
   margin-left: auto;
   justify-content: flex-end;
@@ -103,9 +108,10 @@ body {
   font-weight: 700;
   color: #000000;
   font-size: 20px;
-  line-height: 24px;
+  line-height: 20px;
   text-decoration: none;
   text-align: center;
+  margin-bottom: 0;
 }
 
 .navigation-link-current::before {
@@ -124,13 +130,15 @@ body {
   min-height: 24px;
 }
 
+
+
 .navigation-user-icon {
   position: relative;
   display: flex;
   justify-content: center;
   align-self: center;
   width: 44px;
-  padding-top:24px;
+  padding-top:22.5px;
 }
 
 .navigation-user .navigation-item:nth-child(2) {
@@ -160,8 +168,9 @@ body {
   font-size: 16px;
   padding-right: 34px;
   padding-left: 34px;
-  margin-bottom: 14px;
-  margin-top: 14px;
+  margin-bottom: 8px;
+  margin-top: 12px;
+  border: none;
 }
 
 .hero {
@@ -215,7 +224,6 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
-  background-color: rgba(131, 179, 211, 0.2);
   color: #FFFFFF;
 }
 
@@ -231,7 +239,11 @@ body {
 
 
 .advantages-list li:nth-child(even) {
-  background-color: rgba(131, 179, 211, 0.12);
+  background-color:  rgba(131, 179, 211, 0.12);
+}
+
+.advantages-list li:nth-child(3) {
+  background-color:  rgba(131, 179, 211, 0.2);
 }
 
 .advantages-list li:not(:first-child):not(:last-child) {
@@ -252,12 +264,16 @@ body {
   margin-top: 92px;
 }
 
+li:not(:first-child):not(:last-child) .advantages-title {
+  margin-top: 103px;
+}
+
 .advantages-title::before {
   position: absolute;
   width: 2px;
   height: 60px;
   left: 50%;
-  top: 53px;
+  top: 56px;
   background-color: rgba(255, 255, 255, 0.3);
 
   content: "";
@@ -269,7 +285,7 @@ li:not(:first-child):not(:last-child) .advantages-title::before {
   width: 2px;
   height: 60px;
   left: 50%;
-  top: 53px;
+  top: 57px;
   background-color: rgba(0, 0, 0, 0.3);
   content: "";
   transform: rotate(90deg);
@@ -442,6 +458,7 @@ li:not(:first-child):not(:last-child) .advantages-title::before {
   border-radius: 4px;
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
+  flex-grow: 1;
 }
 
 
@@ -526,9 +543,14 @@ li:not(:first-child):not(:last-child) .advantages-title::before {
   display: block;
   width: 115px;
   height: 33px;
-  margin-right: 41.5px;
   margin-top: 48.5px;
+  margin-left: auto;
   fill:#000000;
+
+}
+
+.link {
+  margin-left: auto;
 }
 
 .link-academy:hover {
@@ -544,8 +566,10 @@ li:not(:first-child):not(:last-child) .advantages-title::before {
 }
 
 .filter-part {
+  box-sizing: border-box;
+  margin: 0;
   display: block;
-  flex-direction: column;
+  height: 412px;
   background-image: url("../images/content/Filter_image.jpg");
   background-size: cover;
   color: #FFFFFF;
@@ -600,7 +624,7 @@ li:not(:first-child):not(:last-child) .advantages-title::before {
   padding: 0;
   border: none;
 }
-.range {
+.range-wrapper-inputs {
   width: 287px;
 }
 
@@ -650,27 +674,91 @@ li:not(:first-child):not(:last-child) .advantages-title::before {
  .range-input {
   box-sizing: border-box;
   display: block;
-  width: 100%;
+  width: 143px;
+  background: #F2F2F2;
+  border: none;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  font: inherit;
+
  }
 
+
  .catalog-filter-label {
-  display: flex;
+  display: block;
  }
 
  .range-wrapper-inputs {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
  }
+
 .toggle-min {
-  left: -10px;
+  left: 0px;
   top: -8px;
 }
 
 .toggle-max {
-  right: -10px;
+  right: 0px;
   top: -8px;
 }
 
+.control {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+
+}
+
+.control-mark {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  left: 0;
+}
+
+/*.control-input[type="checkbox"]:checked + .control-mark::before {
+  position: absolute;
+  background-image: url("../images/icons/sorting-icon-1.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  content: "";
+}*/
+
+
+.control:hover {
+  opacity: 0.6;
+}
+
+/*.control:focus .control-mark{
+  background-color: #83B3D3;
+}*/
+
+.control:active {
+  opacity: 0.3;
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #3F5E72;
+  left: 5px;
+  top: 5px;
+  content: "";
+}
+
+.control-label {
+  line-height: 23px;
+}
 
 .catalog-filter-group:first-child {
   margin-right: 70px;
@@ -679,6 +767,7 @@ li:not(:first-child):not(:last-child) .advantages-title::before {
 
 .catalog-filter-group:nth-child(3) {
   width: 288px;
+  margin-left: auto;
 }
 
 .catalog-filter-list {
@@ -687,9 +776,10 @@ li:not(:first-child):not(:last-child) .advantages-title::before {
   padding: 0;
 }
 
-.catalog-filter-item {
-  margin: 0;
+.catalog-filter-item:not(:last-child) {
+  margin-bottom: 16px;
 }
+
 
 .catalog-filter-form {
   display: flex;
@@ -768,11 +858,6 @@ li:not(:first-child):not(:last-child) .advantages-title::before {
 .filter-results {
   background-color: #FFFFFF;
   padding-bottom: 60px;
-}
-
-.total-hotels-number {
-  min-width: 338px;
-  margin-right: 200px;
 }
 
 .sorting-container {
@@ -865,10 +950,16 @@ li:not(:first-child):not(:last-child) .advantages-title::before {
 }
 
 .total-hotels-number {
+  min-width: 338px;
+  margin-right: 200px;
+  margin-top: 0;
+  margin-bottom: 0;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin-top: 56.5px;
+  margin-bottom: 46.5px;
 }
 
 .product-list {
@@ -1087,7 +1178,7 @@ li:not(:first-child):not(:last-child) .advantages-title::before {
   border-radius: 4px;
   text-transform: uppercase;
   cursor: pointer;
-
+  border: none;
 }
 
 .button-blue {
